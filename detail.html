@@ -5,13 +5,30 @@
     <body>
         <div id="Main">
             <div id="Header">
-                <img src="assests/images/logo.png" height="100" width="150" alt="logo"/>
+                <a href="index.html" target="_self"><img src="assests/images/logo.png" height="100" width="150" alt="logo"/></a>
                 <a href="login.html" target="_blank">Login</a>
             </div>
             <div id="Content">
                 <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg"/>
                 <br/>
-                <a href="payment.html" target="_self">Book Now</a>
+                <form action="payment.html" method="get">
+                    <label>Adults:</label>
+                    <input name="adult" type="number" min="1" required/>
+                    <br/>
+                    <label>Name:</label>
+                    <input name="name" type="text"/ required>
+                    <br/>
+                    <label>From Date:</label>
+                    <input name="fromDate" type="date"/ required>
+                    <br/>
+                    <label>To Date:</label>
+                    <input name="toDate" type="date"/ required>
+                    <br/>
+                    <label>Total:</label>
+                    <input name="price" type="text"/ readonly>
+                    <br/>
+                    <input type="submit" value="Book Now"/>
+                </form>
                 <h2>Radisson Blu Hotel</h2>
                 <p>RATING</p>
                 <p>5 Star</p>
@@ -27,7 +44,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur dignissimos cupiditate modi saepe mollitia ipsam tenetur odio enim excepturi eligendi nostrum fugit, sapiente impedit iste quasi quaerat quam voluptates soluta!</p>
             </div>
             <div id="Footer">
-                <a href="contact.html" target="_blank">Contact Us</a>
+                <a href="contact.html" target="_self">Contact Us</a>
                 <br/>
                 <a href="https://www.facebook.com" target="_blank"><img src="./assests/images/facebook.png" height="20px" width="22px"/></a>
                 <a href="https://www.instagram.com" target="_blank"><img src="./assests/images/instagram.png" height="20px" width="22px"/></a>

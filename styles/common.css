@@ -1,10 +1,13 @@
 body{
     height: 100vh;
     width: 100vw;
+    margin: 0px;
+    background-color: #e0e0e0;
 }
 #Main{
     height: 100vh;
     width: 100vw;
+    margin: 0px;
 }
 #logo{
     height: 60px;
@@ -13,4 +16,7 @@ body{
 .socialMedia{
     height: 20px;
     width: 22px;
+}
+header,footer{
+    background-color: rosybrown;
 }

@@ -1,44 +1,84 @@
-.hotelImage{
+.hotels a:hover {
+    color: black;
+}
+#content .btn-outline-primary {
+    border: none;
+    color: black;
+}
+#content .btn-outline-primary:hover {
+    color: black;
+    background-color: transparent;
+}
+#content .btn-outline-primary:focus {
+    box-shadow: none;
+    color: black;
+}
+#content .btn-outline-primary:active {
+    box-shadow: none;
+    color: black;
+}
+#content .btn-check:checked + .btn-outline-primary {
+    box-shadow: none;
+    color: black;
+    background-color: #0d6efd;
+}
+#content {
+    margin-top: 4%;
+    text-align: center;
+}
+
+#list-view {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 6%;
+    margin: 4% 4% 6% 4%;
+}
+
+#list-view img {
     height: 200px;
     width: 250px;
 }
-.box {
+
+.hotels {
+    margin: 2%;
     background-color: lightgrey;
-    width: 45%;
-    height: 30%;
-    margin: 1% 0;
+    width: 100%;
+    color: black;
+    display: flex;
+    height: 200px;
 }
-.hotel {
+#clickImage {
+    display: flex;
+}
+.hotels{
     display: flex;
     flex-direction: row;
+    width: 500px;
 }
-.details{
-    margin-left: 2%;
+.hotels a {
+    text-decoration: none;
+    color: black;
 }
-#list-view{
-    margin: 0 5%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+.hotelDetails {
+    margin-left: 4%;
+    text-align: left;
+    margin-top: 4%;
 }
-ul{
-    padding: 0;
-    align-items: center;
-    margin: auto;
-    text-align: center;
-    height: 60px;
-    line-height: 60px;
-    vertical-align: middle;
+.hotels:hover {
+    background-color: rosybrown;
 }
-ul li{
-    text-align: center;
-    margin: 3%;
-    display: inline;
-    list-style-type: none;
-    font-weight: bold;
+
+/* making list and map view visible on click */
+#map-view-button:checked ~ #map-view {
+    display: grid;
 }
-#map-view{
+#map-view-button:checked ~ #list-view {
+    display: none;
+}
+
+#list-view-button:checked ~ #list-view {
+    display: grid;
+}
+#list-view-button:checked ~ #map-view {
     display: none;
 }

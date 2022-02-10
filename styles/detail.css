@@ -19,7 +19,7 @@
 #detailImage {
     border: 1px solid black;
     display: block;
-    width: 75%;
+    width: 66%;
     height: 370px;
     text-align: center;
 }
@@ -28,7 +28,7 @@
     padding: 0 2%;
     border: 1px solid black;
     border-left: none;
-    width: 25%;
+    width: 34%;
     height: 370px;
     display: flex;
     flex-direction: column;

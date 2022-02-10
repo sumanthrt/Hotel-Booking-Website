@@ -1,22 +1,77 @@
 body{
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     margin: 0px;
     background-color: #e0e0e0;
+    font-family: 'Ubuntu',sans-serif;
+}
+header{
+    background-color: rosybrown;
+    position: sticky;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 60px;
+}
+footer{
+    background-color: rosybrown;
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}
+a{
+    text-decoration: none;
+    color: black;
 }
 #Main{
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     margin: 0px;
 }
 #logo{
     height: 60px;
     width: 60px;
 }
+#loginButton{
+    height: 60px;
+    line-height: 60px;
+    float: right;
+    vertical-align: middle; 
+    text-align: center;
+    margin-right: 2%;
+}
+#social{
+    float: right;
+    clear: none;
+    height: 60px;
+    line-height: 60px;
+    vertical-align: middle;
+    margin-right: 1%;
+}
+#copyright{
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 12px;
+}
+#copyright span{
+    line-height: 1;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-bottom: 0.5%;
+}
+#contactLink{
+    float: left;
+    clear: none;
+    height: 60px;
+    line-height: 60px;
+    vertical-align: middle; 
+    text-align: center;
+    margin-left: 1%;
+}
 .socialMedia{
     height: 20px;
     width: 22px;
-}
-header,footer{
-    background-color: rosybrown;
 }

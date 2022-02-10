@@ -3,7 +3,33 @@
     width: 250px;
 }
 .hotel{
-    margin: 2%;
+    margin: 2% 3%;
     background-color: rgb(132,136,139);
     width: 40%;
+    height: 30%;
+    display: inline-block;
+}
+#list-view{
+    margin: 0 5%;
+    display: block;
+    align-items: center;
+}
+ul{
+    padding: 0;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    vertical-align: middle;
+}
+ul li{
+    text-align: center;
+    margin: 3%;
+    display: inline;
+    list-style-type: none;
+    font-weight: bold;
+}
+#map-view{
+    display: none;
 }

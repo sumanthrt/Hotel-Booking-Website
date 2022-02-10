@@ -16,32 +16,41 @@
                 <a href="login.html" target="_self" id="loginButton">Login</a>
             </header>
             <div id="content">
-                <div>
-                    <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" id="radissonHotel"/>
+                <div id="top">
+                    <div id="detailImage">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" id="radissonHotel"/>
+                    </div>
+                    <form action="payment.html" method="get" id="bookingForm">
+                        <div class="field">
+                            <label>Adults:</label>
+                            <input name="adult" type="number" min="1" value="1" required class="fieldBox"/>
+                        </div>
+                        <div class="field">
+                            <label>Name:</label>
+                            <input name="name" type="text" required class="fieldBox"/>
+                        </div>
+                        <div class="field">
+                            <label>From Date:</label>
+                            <input name="fromDate" type="date" required class="fieldBox"/>
+                        </div>
+                        <div class="field">
+                            <label>To Date:</label>
+                            <input name="toDate" type="date" required class="fieldBox"/>
+                        </div>
+                        <div class="field">
+                            <label>Total:</label>
+                            <input name="price" type="text" readonly class="fieldBox"/>
+                        </div>
+                        <div id="submitButton">
+                            <input type="submit" value="Book Now" id="bookButton"/>
+                        </div>
+                    </form>
                 </div>
-                <form action="payment.html" method="get" id="bookingForm">
-                    <label>Adults:</label>
-                    <input name="adult" type="number" min="1" required/>
-                    <br/>
-                    <label>Name:</label>
-                    <input name="name" type="text"/ required>
-                    <br/>
-                    <label>From Date:</label>
-                    <input name="fromDate" type="date"/ required>
-                    <br/>
-                    <label>To Date:</label>
-                    <input name="toDate" type="date"/ required>
-                    <br/>
-                    <label>Total:</label>
-                    <input name="price" type="text"/ readonly>
-                    <br/>
-                    <input type="submit" value="Book Now"/>
-                </form>
                 <div id="details">
                     <h2>Radisson Blu Hotel</h2>
-                    <p>RATING</p>
+                    <h5>RATING</h5>
                     <p>5 Star</p>
-                    <p>AMENITIES</p>
+                    <h5>AMENITIES</h5>
                     <ul>
                         <li>Room service</li>
                         <li>Restaurant</li>
@@ -55,12 +64,12 @@
             </div>
             <footer>
                 <a href="contact.html" target="_self" id="contactLink">Contact Us</a>
+                <div id="copyright"><span>&copy; 2020 ROOM SEARCH PVT. LTD</span></div>
                 <div id="social">
                     <a href="https://www.facebook.com" target="_blank"><img src="./assests/images/facebook.png"class="socialMedia"/></a>
                     <a href="https://www.instagram.com" target="_blank"><img src="./assests/images/instagram.png"class="socialMedia"/></a>
                     <a href="https://www.twitter.com" target="_blank"><img src="./assests/images/twitter.png"class="socialMedia"/></a>
                 </div>
-                <div id="copyright"><span>&copy; 2020 ROOM SEARCH PVT. LTD</span></div>
             </footer>
         </div>
     </body>

@@ -8,6 +8,10 @@ body{
 header{
     background-color: rosybrown;
     position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     left: 0;
     top: 0;
     width: 100%;
@@ -16,10 +20,14 @@ header{
 footer{
     background-color: rosybrown;
     position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 60px;
+    height: 50px;
 }
 a{
     text-decoration: none;
@@ -33,43 +41,19 @@ a{
 #logo{
     height: 60px;
     width: 60px;
+    margin-left: 1%;
 }
 #loginButton{
-    height: 60px;
-    line-height: 60px;
-    float: right;
-    vertical-align: middle; 
-    text-align: center;
     margin-right: 2%;
 }
 #social{
-    float: right;
-    clear: none;
-    height: 60px;
-    line-height: 60px;
-    vertical-align: middle;
-    margin-right: 1%;
+    margin-right: 2%;
 }
 #copyright{
-    height: 60px;
-    line-height: 60px;
-    text-align: center;
     font-size: 12px;
 }
-#copyright span{
-    line-height: 1;
-    display: inline-block;
-    vertical-align: bottom;
-    margin-bottom: 0.5%;
-}
 #contactLink{
-    float: left;
-    clear: none;
-    height: 60px;
-    line-height: 60px;
-    vertical-align: middle; 
-    text-align: center;
-    margin-left: 1%;
+    margin-left: 2%;
 }
 .socialMedia{
     height: 20px;

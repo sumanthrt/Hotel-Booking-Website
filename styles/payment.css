@@ -1,22 +1,37 @@
 #radissonHotel{
-    height: 500px;
-    width: 500px;
+    height: 250px;
+    width: 300px;
 }
 #hotel{
+    display: flex;
+    flex-direction: row;
     background-color: rgb(132,136,139);
-    width: 50%;
-    height: 20%;
+    height: 250px;
+    width: 55%;
     margin: 2% auto;
 }
-#customerInfo{
-    margin: 2%;
+#content{
+    display: flex;
+    flex-direction: column;
 }
-#tariff{
-    margin: 2%;
+#hotelDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 2%;
+}
+#payDetails{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rosybrown;
+    margin: 0 2% 5% 2%;
     border: 1px black solid;
     border-radius: 5px;
     padding: 1% 2%;
+    height: 180px;
 }
-#payButton{
-    margin-bottom: 3%;
+strong {
+    font-family: cursive;
 }

@@ -1,3 +1,5 @@
+/* body background colour, header and footer position is common for all pages and is styled accordingly */
+/* font family is also set */
 body {
   height: 100%;
   width: 100%;
@@ -5,6 +7,7 @@ body {
   background-color: #e0e0e0;
   font-family: "Ubuntu", sans-serif;
 }
+/* header is sticky and footer is fixed to ensure they are always present */
 header {
   background-color: rosybrown;
   position: sticky;
@@ -35,11 +38,13 @@ a {
   text-decoration: none;
   color: black;
 }
+/* main div will occupy the entire page */
 #Main {
   height: 100%;
   width: 100%;
   margin: 0px;
 }
+/* elements in the header and footer are common to all pages and are styled accordingly */
 #logo {
   height: 60px;
   width: 60px;

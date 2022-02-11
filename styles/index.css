@@ -1,7 +1,9 @@
+/* Content div is displayed verticaly */
 #content {
   display: flex;
   flex-direction: column;
 }
+/* Search bar is aligned in the center of the div and a background image is added */
 #search {
   background-image: url("https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg");
   height: 380px;
@@ -12,9 +14,11 @@
   line-height: 380px;
   vertical-align: middle;
 }
+/* Outline does not appear around search bar when clicked */
 #searchBar:focus {
   outline: none;
 }
+/* Search bar is styled */
 #searchBar {
   border: 1px solid transparent;
   background-color: #f1f1f1;
@@ -24,6 +28,7 @@
   width: 33%;
   height: 40px;
 }
+/* View More Button Styling */
 #view {
   margin: 50px 0;
   text-align: center;
@@ -31,23 +36,27 @@
   line-height: 70px;
   vertical-align: middle;
 }
+/* Cities are displayed as a grid */
 #cities {
   margin: 2% 0;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   grid-row-gap: 2%;
 }
+/* container div to implement overlay */
 .container {
   display: flex;
   position: relative;
   justify-content: center;
   align-items: center;
 }
+/* City image styling */
 .cityImage {
   height: 100%;
   width: 100%;
   border-radius: 25%;
 }
+/* Overlay is implemented by changing opacity on hover and displaying text on hover */
 .image {
   height: 150px;
   width: 150px;
@@ -77,7 +86,7 @@ form {
   flex-direction: column;
   justify-content: space-between;
 }
-
+/* Page is made responsive by changing the grid based on display width */
 @media only screen and (max-width: 768px) {
   #cities {
     grid-template-columns: 50% 50%;

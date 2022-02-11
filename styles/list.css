@@ -1,3 +1,4 @@
+/* hover effect is implements on the hotel details by changing the background color */
 .hotels a:hover {
   color: black;
 }
@@ -41,7 +42,6 @@
 }
 
 .hotels {
-  /* margin: 2%; */
   background-color: lightgrey;
   width: 95%;
   color: black;

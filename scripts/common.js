@@ -1,4 +1,4 @@
-if(localStorage.getItem("isLogin") === "false" || localStorage.getItem("isLogin") === null) {
+if(localStorage.isLogin === "false" || localStorage.isLogin === "null") {
   var headerTemplate = `
   <a href="index.html"><img src="assests/images/logo.png" alt="logo" id="logo" /></a>
   <!-- Button trigger modal -->
@@ -173,10 +173,10 @@ document.querySelector("#loginButton").addEventListener("click", function(){
 })
 
 function login(){
-  if(localStorage.isLogin === "false"){
+  if(localStorage.isLogin === "false" || localStorage.isLogin === "null"){
     var username = document.querySelector("#loginUsername").value;
     var password = document.querySelector("#loginPassword").value;
-    if(username ==="admin" && password === "admin"){
+    if(username === "admin" && password === "admin"){
       document.querySelector("#loginButton").innerText="LOGOUT";
       localStorage.isLogin = true;
       localStorage.username = username;

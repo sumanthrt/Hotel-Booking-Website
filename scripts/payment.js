@@ -1,4 +1,5 @@
 pay();
+//sets functionality of pay now button based on login status
 function pay() {
     if (localStorage.isLogin === "true") {
         document.querySelector("#bookButton").removeAttribute("disabled");
@@ -16,6 +17,8 @@ getHotelDetails = () => {
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
           var jsonData = JSON.parse(this.responseText);
+          document.getElementById("loader").style.display = "none";
+          document.getElementById("Main").style.display = "block";
           setHotelDetails(jsonData.data);//sending to another function to parse and populate details
         }
      };
@@ -43,7 +46,7 @@ setHotelDetails = (data) => {
     const refToAddress = document.getElementById("address");
     refToAddress.innerHTML = address;
 }
-setBookingDetails = (data) => {
+setBookingDetails = (data) => {//setting details of booking on page based on url parameters
     const name = urlParams.get("name");
     const adults = urlParams.get("adult");
     const stringFromDate = urlParams.get("fromDate");

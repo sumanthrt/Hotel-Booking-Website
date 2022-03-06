@@ -1,4 +1,8 @@
 /* hover effect is implements on the hotel details by changing the background color */
+#loader {
+  height: 100%;
+  width: 100%;
+}
 .hotels a:hover {
   color: black;
 }
@@ -67,7 +71,9 @@
 .hotels:hover {
   background-color: rosybrown;
 }
-#map {
+#map-view {
+  margin-top: 15px;
+  height: 600px;
   width: 100%;
 }
 /* making list and map view visible on click */

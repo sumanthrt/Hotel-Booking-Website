@@ -12,7 +12,7 @@ if (mm < 10) {
 } 
     
 today = yyyy + '-' + mm + '-' + dd;
-document.querySelector("#fromDate").setAttribute("min",today);
+document.querySelector("#fromDate").setAttribute("min",today);//setting min date to current date
 function computeTotal() {
     let bookingName = document.getElementById("bookingName").value;
     let noOfAdults = document.getElementById("noOfAdults").value;
@@ -31,12 +31,12 @@ function computeTotal() {
         fm = '0' + fm;
      } 
      minDate = fy + '-' + fm + '-' + fd;
-     document.querySelector("#toDate").setAttribute("min",minDate);
+     document.querySelector("#toDate").setAttribute("min",minDate);//setting attribute of checkout date to min one day after checkin date
     let refToTo = document.getElementById("toDate");
     let toDate = new Date(refToTo.value);
     let refToTotal = document.getElementById("totalPrice");
     let diffInTime = toDate.getTime() - fromDate.getTime();
-    let totalPrice= noOfAdults*1000*diffInTime/(1000 * 3600 * 24);
+    let totalPrice= noOfAdults*1000*diffInTime/(1000 * 3600 * 24);//converting time from seconds to days
     if(totalPrice > 0){
         refToTotal.value = 'Rs. '+ totalPrice;
     }
@@ -50,8 +50,10 @@ getHotelDetails = () => {//to get hotel details
    const xhr = new XMLHttpRequest();
    const apiURL = `https://travel-advisor.p.rapidapi.com/hotels/get-details?location_id=${id}&checkin=2022-03-15&adults=1&lang=en_US&currency=USD&nights=2`;
    xhr.onreadystatechange = function () {
-      if (xhr.readyState == 4 && xhr.status == 200) {
+      if (xhr.readyState == 4 && xhr.status == 200) {//check if positive reply is received
         var jsonData = JSON.parse(this.responseText);
+        document.getElementById("loader").style.display = "none";//display loader while waiting for page to load
+        document.getElementById("Main").style.display = "block";
       //   console.log(jsonData.data);
         parseHotelDetails(jsonData.data);//sending to another function to parse and populate details
       }
@@ -79,7 +81,7 @@ getHotelImages = () => {
 getHotelDetails();
 getHotelImages();
 
-parseHotelImages = data => {
+parseHotelImages = data => {//set hotel images in carousel
    let carouselContent = "";
    let isActive = "active";
    getImages = (item) => {
@@ -100,7 +102,7 @@ parseHotelImages = data => {
    refToCarousel.innerHTML = carouselContent;
 }
 
-parseHotelDetails = (data) => {
+parseHotelDetails = (data) => {//setting hotel details on page
    const name = data[0].name;
    const rating = data[0].rating;
    const description = data[0].description;
@@ -121,7 +123,7 @@ parseHotelDetails = (data) => {
    refToDescription.innerHTML = description;
 }
 
-printRating = (rating) => {
+printRating = (rating) => {//print rating as stars based on numerical value
    let ratingNum = parseInt(rating);
    let ratingString = "";
    let i = 0;

@@ -1,3 +1,4 @@
+//header template is set based on the state of isLogin in local storage
 if(localStorage.isLogin === "false" || localStorage.isLogin == null) {
   var headerTemplate = `
   <a href="index.html"><img src="assests/images/logo.png" alt="logo" id="logo" /></a>
@@ -26,6 +27,8 @@ else {
     LOGOUT
   </button>`
 }
+
+//common footer template for all pages
 let footerTemplate = `
 <a
   class="btn btn-info btn-sm"
@@ -48,8 +51,12 @@ let footerTemplate = `
     ><img src="./assests/images/twitter.png" class="socialMedia"
   /></a>
 </div>`
+
+//setting header and footer based on template
 document.getElementsByTagName("header")[0].innerHTML = headerTemplate;
 document.getElementsByTagName("footer")[0].innerHTML = footerTemplate;
+
+//adding login modal and contact us code to end of main div
 let refToMain = document.getElementById("Main");
 refToMain.innerHTML = refToMain.innerHTML + `
 <!-- Login Modal -->
@@ -157,6 +164,8 @@ refToMain.innerHTML = refToMain.innerHTML + `
     </div>
   </div>
 </div>`
+
+//adding event listeners for login functionality
 document.querySelector("#loginModalBtn").addEventListener("click", function(){
   login();
 })

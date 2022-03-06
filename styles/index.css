@@ -2,17 +2,19 @@
 #content {
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 /* Search bar is aligned in the center of the div and a background image is added */
 #search {
   background-image: url("https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg");
   height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  text-align: center;
-  line-height: 380px;
-  vertical-align: middle;
+  align-items: center;
 }
 /* Outline does not appear around search bar when clicked */
 #searchBar:focus {
@@ -27,6 +29,24 @@
   border-radius: 12px;
   width: 33%;
   height: 40px;
+  align-self: center;
+}
+#searchResult {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+#searchResult a {
+  width: 100%;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
 }
 /* View More Button Styling */
 #view {

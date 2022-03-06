@@ -44,28 +44,8 @@
               class="carousel slide"
               data-bs-ride="carousel"
             >
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img
-                    src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg"
-                    class="align-items-center reSize"
-                    alt="..."
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="https://media-cdn.tripadvisor.com/media/photo-o/01/fa/51/70/r-the-spa.jpg"
-                    class="align-items-center reSize"
-                    alt="..."
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="https://media-cdn.tripadvisor.com/media/photo-w/0e/b2/64/3f/radisson-blu-plaza-delhi.jpg"
-                    class="align-items-center reSize"
-                    alt="..."
-                  />
-                </div>
+              <div class="carousel-inner" id="carouselDiv">
+                <!--Populated with AJAX call-->
               </div>
               <button
                 class="carousel-control-prev"
@@ -123,6 +103,10 @@
               <label>Total:</label>
               <input name="price" type="text" readonly class="fieldBox" id="totalPrice"/>
             </div>
+            <div class="field">
+              <label></label>
+              <input name="id" type="number" class="fieldBox" id="id" style="display: none;"/>
+            </div>
             <div id="submitButton">
               <input
                 class="btn btn-outline-success"
@@ -134,29 +118,18 @@
           </form>
         </div>
         <div id="details">
-          <h2>Radisson Blu Hotel</h2>
+          <h2 id="hotelName"></h2>
           <h5>RATING</h5>
-          <p>
-            <i class="fa-solid fa-star fill"></i
-            ><i class="fa-solid fa-star fill"></i
-            ><i class="fa-solid fa-star fill"></i
-            ><i class="fa-solid fa-star fill"></i
-            ><i class="fa-solid fa-star fill"></i>
+          <p id="starRating">
+
           </p>
           <h5>AMENITIES</h5>
-          <ul>
-            <li>Room service</li>
-            <li>Restaurant</li>
-            <li>Business center</li>
-            <li>Fitness center</li>
-            <li>Pool</li>
+          <ul id="hotelAmenities">
+            
           </ul>
           <h5>DESCRIPTION</h5>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-            dignissimos cupiditate modi saepe mollitia ipsam tenetur odio enim
-            excepturi eligendi nostrum fugit, sapiente impedit iste quasi
-            quaerat quam voluptates soluta!
+          <p id="hotelDescription">
+
           </p>
         </div>
       </div>

@@ -1,4 +1,4 @@
-if(localStorage.isLogin === "false" || localStorage.isLogin === "null") {
+if(localStorage.isLogin === "false" || localStorage.isLogin == null) {
   var headerTemplate = `
   <a href="index.html"><img src="assests/images/logo.png" alt="logo" id="logo" /></a>
   <!-- Button trigger modal -->
@@ -173,7 +173,7 @@ document.querySelector("#loginButton").addEventListener("click", function(){
 })
 
 function login(){
-  if(localStorage.isLogin === "false" || localStorage.isLogin === "null"){
+  if(localStorage.isLogin === "false" || localStorage.isLogin == null){
     var username = document.querySelector("#loginUsername").value;
     var password = document.querySelector("#loginPassword").value;
     if(username === "admin" && password === "admin"){
@@ -186,6 +186,9 @@ function login(){
       document.querySelector("#loginButton").dataset.toggle = "modal";
       document.getElementById("loginButton").removeAttribute("data-bs-toggle");
       pay();
+    }
+    else {
+      alert('Username/Password is incorrect. Please try again!')
     }
   }
 }

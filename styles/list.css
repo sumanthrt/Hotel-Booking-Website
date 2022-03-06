@@ -32,9 +32,9 @@
   display: grid;
   grid-template-columns: 50% 50%;
   grid-column-gap: 2%;
-  grid-row-gap: 2%;
-  margin: 2%;
-  margin-bottom: 5%;
+  grid-row-gap: 3%;
+  margin: 2% 2% 10% 2%;
+  height: auto;
 }
 
 #list-view img {
@@ -52,7 +52,7 @@
   flex-direction: row;
   width: 100%;
 }
-#clickImage {
+.clickImage {
   display: flex;
 }
 .hotels a {
